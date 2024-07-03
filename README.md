@@ -49,3 +49,11 @@ Welcome to the Simple User Login Application! This simple application demonstrat
 3. ## Run the app
    ```bash
    npm start / npm run dev
+
+## Setting environment variables
+
+- you need to create a .env file to store the environment variables, so far there is only three of them:
+```bash
+PORT // defines the port for the app
+SALT // defines the hashing difficulty
+JWT_SECRET // a secret word to manage jws
