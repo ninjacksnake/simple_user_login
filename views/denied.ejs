@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Not allowed</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+        width: 99vw;
+        height: 97vh;
+        background-color: salmon;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 10px;
+      }
+      .error-shower {
+        align-content: center;
+        justify-content: center;
+      }
+      .back-btn {
+        width: 200px;
+        height: 30px;
+        font-weight: bold;
+        border: 1px, darkgray;
+        border-radius: 5px;
+      }
+      .back-btn:hover {
+        background-color: aquamarine;
+        transition: 0.7s;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="error-shower">
+        <h1>Access Denied</h1>
+        <button class="back-btn" id="backButton">LogIn</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  let button = document.getElementById("backButton");
+  button.addEventListener("click", (e) => {
+    location.replace("/login");
+  });
+</script>

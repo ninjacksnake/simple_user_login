@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="protectedstyles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">User Dashboard</h1>
+        <a href="/logout" class="logout-link">Log out</a>
+      </header>
+
+      <div class="main-card">
+        <div class="card user-card">
+          <h2 class="card-title">User Information</h2>
+          <hr />
+          <div class="card-content">
+            <div class="info">
+              <span class="label">Name:</span> <%= user.username %>
+            </div>
+            <div class="info">
+              <span class="label">Age:</span> <%= user.age %>
+            </div>
+            <div class="info">
+              <span class="label">Nationality:</span> <%= user.nationality %>
+            </div>
+          </div>
+        </div>
+
+        <div class="card favorites-card">
+          <h2 class="card-title">Favorite Things</h2>
+          <hr />
+          <div class="card-content">
+            <ul class="favorites-list">
+              <% user.favorites.forEach(function(item) { %>
+              <li><%= item %></li>
+              <% }); %>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <!-- <button class="btn edit-button">Edit User</button>
+        <button class="btn delete-button">Delete User</button> -->
+      </div>
+    </div>
+  </body>
+</html>

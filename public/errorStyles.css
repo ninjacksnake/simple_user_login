@@ -1,0 +1,43 @@
+/* Reset some default styles */
+body,
+h1,
+p {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.error-wrapper {
+  text-align: center;
+}
+
+.error-code {
+  font-family: "Staatliches", cursive;
+  font-size: 10rem;
+  color: #b22222; /* Brick red color */
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: #333;
+}
